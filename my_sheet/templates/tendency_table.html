@@ -1,0 +1,34 @@
+<table class="pure-table" id="prevent_table">
+	{% if errors %}
+	{% for error in errors %}
+	<tr>
+		<td>{{error}}</td>
+	</tr>
+	{% endfor %}
+	{% else %}
+	<thead>
+		<tr>
+			<th>#</td>
+			<th>问题属性</td>
+			<th>数    量</th>
+		</tr>
+	</thead>
+	<tbody>
+		{% for key,value in prevent_attr_count.items %}
+		{% if forloop.counter|divisibleby:2 %}
+			<tr class="pure-table-odd">
+				<td>{{forloop.counter}}</td>
+				<td>{{key}}</td>
+				<td>{{value}}</td>
+			</tr>
+		{% else %}
+			<tr>
+				<td>{{forloop.counter}}</td>
+				<td>{{key}}</td>
+				<td>{{value}}</td>
+			</tr>
+		{% endif %}
+		{% endfor %}
+	</tbody>
+	{% endif %}
+</table>

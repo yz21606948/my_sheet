@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% block content %}
+	<div class="header">
+	    <h1>Page Title</h1>
+	    <h2>A subtitle for your page goes here</h2>
+	</div>
+
+	<div class="content">
+	    <div class="pure-g">
+	    	<div class="pure-u-1-2">
+	    		<h2 class="content-subhead" style="color:orange;margin-left:55px">预警列表</h2>
+	    		{% include "tendency_table.html" %}
+	    	</div>
+
+	    	<div class="pure-u-1-2">
+	    		<h2 class="content-subhead" style="color:orange;margin-left:200px">过滤器</h2>
+	    		<form class="pure-form pure-form-aligned">
+	    			<fieldset>
+	    				<div class="pure-control-group">
+	    					<label for="date_from">起始日期</label>
+	    					<input id="date_from" type="date" msg="起始日期">
+	    				</div>
+	    				<div class="pure-control-group">
+	    					<label for="date_to">结束日期</label>
+	    					<input id="date_to" type="date" msg="结束日期">
+	    				</div>
+	    				<div class="pure-controls">
+	    					<button type="submit" class="pure-button pure-button-primary" id="time_search">查询</button>
+	    				</div>
+	    			</fieldset>
+	    		</form>
+	    	</div>
+	    </div>
+
+	    <h2 class="content-subhead" style="color:orange;margin-left:55px">问题属性占比</h2>
+	</div>
+{% endblock %}
