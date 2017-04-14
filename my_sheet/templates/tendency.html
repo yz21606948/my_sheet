@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% block content %}
 	<div class="header">
-	    <h1>Page Title</h1>
+	    <h1>趋势查询</h1>
 	    <h2>A subtitle for your page goes here</h2>
 	</div>
 
@@ -29,9 +29,61 @@
 	    				</div>
 	    			</fieldset>
 	    		</form>
+	    		<script type="text/javascript">
+	    			$(function(){
+	    				$('#time_search').click(function(){
+	    					var num=0
+	    					var str=""
+	    					$("input[type$='date']").each(function(n){
+	    						if($(this).val() == "")
+	    						{
+	    							num++
+	    							str+=$(this).attr("msg")+"不能为空!\r\n"
+	    						}
+	    					});
+	    					if(num > 0)
+	    					{
+	    						alert(str)
+	    						return false
+	    					}
+
+	    					var date_from=$('#date_from').val()
+	    					var date_to=$('#date_to').val()
+	    					//Ajax提交表单，渲染表格
+	    					$.ajax({
+	    						type:"POST",
+	    						data:{'date_from':date_from,'date_to':date_to},
+	    						url:"/get_tendency_table/",
+	    						cache:false,
+	    						success:function(data){
+	    							$('#prevent_table').html(data)
+	    						},
+	    						error:function(){
+	    							alert("查找失败!")
+	    						}
+	    					});
+
+	    					//Ajax提交表单，渲染图标
+	    					$.ajax({
+	    						type:"POST",
+	    						data:{'date_from':date_from,'date_to':date_to},
+	    						url:"/get_tendency_chart/",
+	    						cache:false,
+	    						success:function(data){
+	    							$('#container').html(data)
+	    						},
+	    						error:function(){
+	    							alert("查找失败!")
+	    						}
+	    					});
+	    					return false
+	    				});
+	    			});
+	    		</script>
 	    	</div>
 	    </div>
 
 	    <h2 class="content-subhead" style="color:orange;margin-left:55px">问题属性占比</h2>
+	    {% include "tendency_chart.html" %}
 	</div>
 {% endblock %}

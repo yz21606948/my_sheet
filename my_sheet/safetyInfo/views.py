@@ -56,8 +56,6 @@ def tendency(request):
 	prevent_attr_count=get_attr_count(date_from,date_to)[1]
 	if not prevent_attr_count:
 		errors.append("当月尚未有预警记录!")
-	print problem_attr_count
-	print prevent_attr_count
 	return render(request,'tendency.html',{'problem_attr_count':problem_attr_count,'prevent_attr_count':prevent_attr_count,'errors':errors})
 
 def get_attr_count(date_from,date_to):
@@ -74,3 +72,30 @@ def get_attr_count(date_from,date_to):
 		elif value > 2:
 			alarm_attr_count[key]=value
 	return (problem_attr_count,prevent_attr_count,alarm_attr_count) 
+
+def get_tendency_table(request):
+	errors=[]
+	problem_attr_count={}
+	prevent_attr_count={}
+	errors,problem_attr_count,prevent_attr_count=get_tendency_data(request)
+	return render(request,'tendency_table.html',{'errors':errors,'problem_attr_count':problem_attr_count,'prevent_attr_count':prevent_attr_count})
+
+def get_tendency_data(request):
+	errors=[]
+	if request.method == 'POST':
+		date_from=request.POST['date_from']
+		date_to=request.POST['date_to']
+		problem_attr_count=get_attr_count(date_from,date_to)[0]
+		prevent_attr_count=get_attr_count(date_from,date_to)[1]
+		if not prevent_attr_count:
+			errors.append('所查区间内尚未有预警记录!')
+	else:
+		errors.append('查询未完成，请重新查询!')
+	return (errors,problem_attr_count,prevent_attr_count)
+
+def get_tendency_chart(request):
+	errors=[]
+	problem_attr_count={}
+	prevent_attr_count={}
+	errors,problem_attr_count,prevent_attr_count=get_tendency_data(request)
+	return render(request,'tendency_chart.html',{'errors':errors,'problem_attr_count':problem_attr_count,'prevent_attr_count':prevent_attr_count})
