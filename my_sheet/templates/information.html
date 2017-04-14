@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+{% block content %}
+	<div class="header">
+	    <h1>落地查询</h1>
+	    <h2>A subtitle for your page goes here</h2>
+	</div>
+	<div class="content">
+		<h3 class="content-subhead" style="color:black">历史时间</h3>
+		<p>{{problem.history_time}}</p>
+
+		<h3 class="content-subhead" style="color:black">发布时间</h3>
+		<p>{{problem.publish_time}}</p>
+
+		<h3 class="content-subhead" style="color:black">问题来源</h3>
+		<p>{{problem.problem_origin}}</p>
+
+		<h3 class="content-subhead" style="color:black">整改问题</h3>
+		<p>{{problem.problem}}</p>
+
+		<h3 class="content-subhead" style="color:black">发布平台</h3>
+		<p>{{problem.problem_platform}}</p>
+
+		<h3 class="content-subhead" style="color:black">问题属性</h3>
+		<p>{{problem.problem_attribute}}</p>
+
+		<h3 class="content-subhead" style="color:black">问题原因</h3>
+		<p>{{problem.problem_reason}}</p>
+
+		<h3 class="content-subhead" style="color:black">问题后果</h3>
+		<p>{{problem.consequence}}</p>
+
+		<h3 class="content-subhead" style="color:black">问题等级</h3>
+		<p>{{problem.problem_level}}</p>
+
+		<h3 class="content-subhead" style="color:black">责任单位</h3>
+		<p>{{problem.responsiblity}}</p>
+
+		<h3 class="content-subhead" style="color:black">发布人员</h3>
+		<p>{{problem.publisher}}</p>
+
+		<h3 class="content-subhead" style="color:black">整改期限</h3>
+		<p>{{problem.deadline}}</p>
+	</div>
+{% endblock %}

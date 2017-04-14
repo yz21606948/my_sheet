@@ -23,6 +23,9 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', views.home),
     url(r'^tendency/', views.tendency),
+    url(r'^implement/', views.implement),
     url(r'^get_tendency_table/', views.get_tendency_table),
     url(r'^get_tendency_chart/', views.get_tendency_chart),
+    url(r'^information', views.information),
+
 ]
