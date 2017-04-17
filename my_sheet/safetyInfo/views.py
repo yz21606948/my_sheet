@@ -102,9 +102,6 @@ def information(request):
 		problem=SafeInformation.objects.get(id=problem_id)
 	return render(request,'information.html',{'problem':problem})
 
-def analyze(request):
-	return render(request,'analyze.html')
-
 def get_attr_count(date_from,date_to):
 	problem_attr_count={}
 	prevent_attr_count={}

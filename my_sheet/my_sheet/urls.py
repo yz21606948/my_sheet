@@ -28,6 +28,4 @@ urlpatterns = [
     url(r'^get_tendency_chart/', views.get_tendency_chart),
     url(r'^get_implement_table/', views.get_implement_table),
     url(r'^information', views.information),
-    url(r'^analyze/', views.analyze),
-
 ]
