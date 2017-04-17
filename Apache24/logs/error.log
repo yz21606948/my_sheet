@@ -1,0 +1,94 @@
+[Mon Apr 17 17:44:01.970359 2017] [core:warn] [pid 7356:tid 136] AH00098: pid file E:/python/project/Apache24/logs/httpd.pid overwritten -- Unclean shutdown of previous Apache run?
+[Mon Apr 17 17:44:01.974359 2017] [mpm_winnt:notice] [pid 7356:tid 136] AH00455: Apache/2.4.6 (Win64) configured -- resuming normal operations
+[Mon Apr 17 17:44:01.974359 2017] [mpm_winnt:notice] [pid 7356:tid 136] AH00456: Apache Lounge VC10 Server built: Jul 16 2013 11:31:50
+[Mon Apr 17 17:44:01.974359 2017] [core:notice] [pid 7356:tid 136] AH00094: Command line: 'E:\\python\\project\\Apache24\\bin\\httpd.exe -d E:/python/project/Apache24'
+[Mon Apr 17 17:44:01.976360 2017] [mpm_winnt:notice] [pid 7356:tid 136] AH00418: Parent: Created child process 8512
+Apache server shutdown initiated...
+pm_winnt:notice] [pid 8512:tid 160] AH00354: Child: Starting 64 worker threads.
+[Mon Apr 17 17:44:05.460559 2017] [mpm_winnt:notice] [pid 7356:tid 136] AH00422: Parent: Received shutdown signal -- Shutting down the server.
+[Mon Apr 17 17:44:07.461673 2017] [mpm_winnt:notice] [pid 8512:tid 160] AH00364: Child: All worker threads have exited.
+[Mon Apr 17 17:44:07.482675 2017] [mpm_winnt:notice] [pid 7356:tid 136] AH00430: Parent: Child process 8512 exited successfully.
+[Mon Apr 17 17:59:14.107299 2017] [wsgi:warn] [pid 7928:tid 168] mod_wsgi: Compiled for Python/2.7.11.
+[Mon Apr 17 17:59:14.107299 2017] [wsgi:warn] [pid 7928:tid 168] mod_wsgi: Runtime using Python/2.7.
+[Mon Apr 17 17:59:14.107299 2017] [mpm_winnt:notice] [pid 7928:tid 168] AH00455: Apache/2.4.6 (Win64) mod_wsgi/4.4.23 Python/2.7 configured -- resuming normal operations
+[Mon Apr 17 17:59:14.107299 2017] [mpm_winnt:notice] [pid 7928:tid 168] AH00456: Apache Lounge VC10 Server built: Jul 16 2013 11:31:50
+[Mon Apr 17 17:59:14.107299 2017] [core:notice] [pid 7928:tid 168] AH00094: Command line: 'E:\\python\\project\\Apache24\\bin\\httpd.exe -d E:/python/project/Apache24'
+[Mon Apr 17 17:59:14.107299 2017] [mpm_winnt:notice] [pid 7928:tid 168] AH00418: Parent: Created child process 7932
+Apache server shutdown initiated...
+sgi:warn] [pid 7932:tid 152] mod_wsgi: Compiled for Python/2.7.11.
+[Mon Apr 17 17:59:14.702100 2017] [wsgi:warn] [pid 7932:tid 152] mod_wsgi: Runtime using Python/2.7.
+[Mon Apr 17 17:59:14.748900 2017] [mpm_winnt:notice] [pid 7932:tid 152] AH00354: Child: Starting 64 worker threads.
+[Mon Apr 17 17:59:18.653908 2017] [mpm_winnt:notice] [pid 7928:tid 168] AH00422: Parent: Received shutdown signal -- Shutting down the server.
+[Mon Apr 17 17:59:20.668311 2017] [mpm_winnt:notice] [pid 7932:tid 152] AH00364: Child: All worker threads have exited.
+[Mon Apr 17 17:59:20.683911 2017] [mpm_winnt:notice] [pid 7928:tid 168] AH00430: Parent: Child process 7932 exited successfully.
+[Mon Apr 17 18:00:50.729576 2017] [wsgi:warn] [pid 8356:tid 168] mod_wsgi: Compiled for Python/2.7.11.
+[Mon Apr 17 18:00:50.729576 2017] [wsgi:warn] [pid 8356:tid 168] mod_wsgi: Runtime using Python/2.7.
+[Mon Apr 17 18:00:50.745176 2017] [mpm_winnt:notice] [pid 8356:tid 168] AH00455: Apache/2.4.6 (Win64) mod_wsgi/4.4.23 Python/2.7 configured -- resuming normal operations
+[Mon Apr 17 18:00:50.745176 2017] [mpm_winnt:notice] [pid 8356:tid 168] AH00456: Apache Lounge VC10 Server built: Jul 16 2013 11:31:50
+[Mon Apr 17 18:00:50.745176 2017] [core:notice] [pid 8356:tid 168] AH00094: Command line: 'E:\\python\\project\\Apache24\\bin\\httpd.exe -d E:/python/project/Apache24'
+[Mon Apr 17 18:00:50.745176 2017] [mpm_winnt:notice] [pid 8356:tid 168] AH00418: Parent: Created child process 8024
+Apache server shutdown initiated...
+sgi:warn] [pid 8024:tid 152] mod_wsgi: Compiled for Python/2.7.11.
+[Mon Apr 17 18:00:51.341977 2017] [wsgi:warn] [pid 8024:tid 152] mod_wsgi: Runtime using Python/2.7.
+[Mon Apr 17 18:00:51.373177 2017] [mpm_winnt:notice] [pid 8024:tid 152] AH00354: Child: Starting 64 worker threads.
+[Mon Apr 17 18:01:17.932049 2017] [wsgi:error] [pid 8024:tid 728] Not Found: /static/side-menu.css
+[Mon Apr 17 18:01:17.945050 2017] [wsgi:error] [pid 8024:tid 728] Not Found: /static/ui.js
+[Mon Apr 17 18:02:44.006309 2017] [wsgi:error] [pid 8024:tid 728] Not Found: /static/side-menu.css
+[Mon Apr 17 18:02:44.020310 2017] [wsgi:error] [pid 8024:tid 728] Not Found: /static/ui.js
+[Mon Apr 17 18:02:48.020426 2017] [wsgi:error] [pid 8024:tid 728] Not Found: /static/side-menu.css
+[Mon Apr 17 18:02:48.028427 2017] [wsgi:error] [pid 8024:tid 724] Not Found: /static/ui.js
+[Mon Apr 17 18:02:49.866101 2017] [wsgi:error] [pid 8024:tid 728] Not Found: /static/ui.js
+[Mon Apr 17 18:02:49.868101 2017] [wsgi:error] [pid 8024:tid 724] Not Found: /static/side-menu.css
+[Mon Apr 17 18:03:05.669473 2017] [wsgi:error] [pid 8024:tid 728] Not Found: /static/side-menu.css
+[Mon Apr 17 18:03:05.674473 2017] [wsgi:error] [pid 8024:tid 724] Not Found: /static/ui.js
+[Mon Apr 17 18:03:08.887596 2017] [wsgi:error] [pid 8024:tid 724] Not Found: /static/side-menu.css
+[Mon Apr 17 18:08:13.150628 2017] [mpm_winnt:notice] [pid 8356:tid 168] AH00422: Parent: Received shutdown signal -- Shutting down the server.
+[Mon Apr 17 18:08:15.177257 2017] [mpm_winnt:notice] [pid 8024:tid 152] AH00364: Child: All worker threads have exited.
+[Mon Apr 17 18:08:15.224057 2017] [wsgi:error] [pid 8024:tid 152] Exception AttributeError: "'NoneType' object has no attribute 'clear'" in <bound method OrderedDict.__del__ of OrderedDict()> ignored
+[Mon Apr 17 18:08:15.224057 2017] [wsgi:error] [pid 8024:tid 152] Exception AttributeError: "'NoneType' object has no attribute 'clear'" in <bound method OrderedDict.__del__ of OrderedDict()> ignored
+[Mon Apr 17 18:08:15.224057 2017] [wsgi:error] [pid 8024:tid 152] Exception AttributeError: "'NoneType' object has no attribute 'clear'" in <bound method OrderedDict.__del__ of OrderedDict()> ignored
+[Mon Apr 17 18:08:15.224057 2017] [wsgi:error] [pid 8024:tid 152] Exception AttributeError: "'NoneType' object has no attribute 'clear'" in Exception AttributeError: "'NoneType' object has no attribute 'clear'" in Exception AttributeError: "'NoneType' object has no attribute 'clear'" in Exception AttributeError: "'NoneType' object has no attribute 'clear'" in Exception AttributeError: "'NoneType' object has no attribute 'clear'" in Exception AttributeError: "'NoneType' object has no attribute 'clear'" in Exception AttributeError: "'NoneType' object has no attribute 'clear'" in Exception AttributeError: "'NoneType' object has no attribute 'clear'" in Exception AttributeError: "'NoneType' object has no attribute 'clear'" in Exception AttributeError: "'NoneType' object has no attribute 'clear'" in 
+[Mon Apr 17 18:08:15.489257 2017] [mpm_winnt:notice] [pid 8356:tid 168] AH00430: Parent: Child process 8024 exited successfully.
+[Mon Apr 17 18:08:26.258928 2017] [wsgi:warn] [pid 6308:tid 168] mod_wsgi: Compiled for Python/2.7.11.
+[Mon Apr 17 18:08:26.274528 2017] [wsgi:warn] [pid 6308:tid 168] mod_wsgi: Runtime using Python/2.7.
+[Mon Apr 17 18:08:26.274528 2017] [mpm_winnt:notice] [pid 6308:tid 168] AH00455: Apache/2.4.6 (Win64) mod_wsgi/4.4.23 Python/2.7 configured -- resuming normal operations
+[Mon Apr 17 18:08:26.274528 2017] [mpm_winnt:notice] [pid 6308:tid 168] AH00456: Apache Lounge VC10 Server built: Jul 16 2013 11:31:50
+[Mon Apr 17 18:08:26.274528 2017] [core:notice] [pid 6308:tid 168] AH00094: Command line: 'E:\\python\\project\\Apache24\\bin\\httpd.exe -d E:/python/project/Apache24'
+[Mon Apr 17 18:08:26.274528 2017] [mpm_winnt:notice] [pid 6308:tid 168] AH00418: Parent: Created child process 9072
+Apache server shutdown initiated...
+sgi:warn] [pid 9072:tid 152] mod_wsgi: Compiled for Python/2.7.11.
+[Mon Apr 17 18:08:26.885929 2017] [wsgi:warn] [pid 9072:tid 152] mod_wsgi: Runtime using Python/2.7.
+[Mon Apr 17 18:08:26.917129 2017] [mpm_winnt:notice] [pid 9072:tid 152] AH00354: Child: Starting 64 worker threads.
+[Mon Apr 17 18:11:54.784172 2017] [mpm_winnt:notice] [pid 6308:tid 168] AH00422: Parent: Received shutdown signal -- Shutting down the server.
+[Mon Apr 17 18:11:56.784286 2017] [mpm_winnt:notice] [pid 9072:tid 152] AH00364: Child: All worker threads have exited.
+[Mon Apr 17 18:11:56.826289 2017] [wsgi:error] [pid 9072:tid 152] Exception AttributeError: "'NoneType' object has no attribute 'clear'" in <bound method OrderedDict.__del__ of OrderedDict()> ignored
+[Mon Apr 17 18:11:56.826289 2017] [wsgi:error] [pid 9072:tid 152] Exception AttributeError: "'NoneType' object has no attribute 'clear'" in <bound method OrderedDict.__del__ of OrderedDict()> ignored
+[Mon Apr 17 18:11:56.826289 2017] [wsgi:error] [pid 9072:tid 152] Exception AttributeError: "'NoneType' object has no attribute 'clear'" in <bound method OrderedDict.__del__ of OrderedDict()> ignored
+[Mon Apr 17 18:11:56.842290 2017] [wsgi:error] [pid 9072:tid 152] Exception AttributeError: "'NoneType' object has no attribute 'clear'" in Exception AttributeError: "'NoneType' object has no attribute 'clear'" in Exception AttributeError: "'NoneType' object has no attribute 'clear'" in Exception AttributeError: "'NoneType' object has no attribute 'clear'" in Exception AttributeError: "'NoneType' object has no attribute 'clear'" in Exception AttributeError: "'NoneType' object has no attribute 'clear'" in Exception AttributeError: "'NoneType' object has no attribute 'clear'" in Exception AttributeError: "'NoneType' object has no attribute 'clear'" in Exception AttributeError: "'NoneType' object has no attribute 'clear'" in Exception AttributeError: "'NoneType' object has no attribute 'clear'" in 
+[Mon Apr 17 18:11:57.020300 2017] [mpm_winnt:notice] [pid 6308:tid 168] AH00430: Parent: Child process 9072 exited successfully.
+[Mon Apr 17 18:12:00.667508 2017] [wsgi:warn] [pid 8620:tid 168] mod_wsgi: Compiled for Python/2.7.11.
+[Mon Apr 17 18:12:00.667508 2017] [wsgi:warn] [pid 8620:tid 168] mod_wsgi: Runtime using Python/2.7.
+[Mon Apr 17 18:12:00.670508 2017] [mpm_winnt:notice] [pid 8620:tid 168] AH00455: Apache/2.4.6 (Win64) mod_wsgi/4.4.23 Python/2.7 configured -- resuming normal operations
+[Mon Apr 17 18:12:00.670508 2017] [mpm_winnt:notice] [pid 8620:tid 168] AH00456: Apache Lounge VC10 Server built: Jul 16 2013 11:31:50
+[Mon Apr 17 18:12:00.670508 2017] [core:notice] [pid 8620:tid 168] AH00094: Command line: 'E:\\python\\project\\Apache24\\bin\\httpd.exe -d E:/python/project/Apache24'
+[Mon Apr 17 18:12:00.672509 2017] [mpm_winnt:notice] [pid 8620:tid 168] AH00418: Parent: Created child process 7804
+Apache server shutdown initiated...
+sgi:warn] [pid 7804:tid 152] mod_wsgi: Compiled for Python/2.7.11.
+[Mon Apr 17 18:12:01.311545 2017] [wsgi:warn] [pid 7804:tid 152] mod_wsgi: Runtime using Python/2.7.
+[Mon Apr 17 18:12:01.346547 2017] [mpm_winnt:notice] [pid 7804:tid 152] AH00354: Child: Starting 64 worker threads.
+[Mon Apr 17 18:20:33.188849 2017] [mpm_winnt:notice] [pid 8620:tid 168] AH00422: Parent: Received shutdown signal -- Shutting down the server.
+[Mon Apr 17 18:20:35.207257 2017] [mpm_winnt:notice] [pid 7804:tid 152] AH00364: Child: All worker threads have exited.
+[Mon Apr 17 18:20:35.254058 2017] [wsgi:error] [pid 7804:tid 152] Exception AttributeError: "'NoneType' object has no attribute 'clear'" in <bound method OrderedDict.__del__ of OrderedDict()> ignored
+[Mon Apr 17 18:20:35.254058 2017] [wsgi:error] [pid 7804:tid 152] Exception AttributeError: "'NoneType' object has no attribute 'clear'" in <bound method OrderedDict.__del__ of OrderedDict()> ignored
+[Mon Apr 17 18:20:35.254058 2017] [wsgi:error] [pid 7804:tid 152] Exception AttributeError: "'NoneType' object has no attribute 'clear'" in <bound method OrderedDict.__del__ of OrderedDict()> ignored
+[Mon Apr 17 18:20:35.254058 2017] [wsgi:error] [pid 7804:tid 152] Exception AttributeError: "'NoneType' object has no attribute 'clear'" in Exception AttributeError: "'NoneType' object has no attribute 'clear'" in Exception AttributeError: "'NoneType' object has no attribute 'clear'" in Exception AttributeError: "'NoneType' object has no attribute 'clear'" in Exception AttributeError: "'NoneType' object has no attribute 'clear'" in Exception AttributeError: "'NoneType' object has no attribute 'clear'" in Exception AttributeError: "'NoneType' object has no attribute 'clear'" in Exception AttributeError: "'NoneType' object has no attribute 'clear'" in Exception AttributeError: "'NoneType' object has no attribute 'clear'" in Exception AttributeError: "'NoneType' object has no attribute 'clear'" in 
+[Mon Apr 17 18:20:35.474458 2017] [mpm_winnt:notice] [pid 8620:tid 168] AH00430: Parent: Child process 7804 exited successfully.
+[Mon Apr 17 18:20:37.996473 2017] [wsgi:warn] [pid 7532:tid 168] mod_wsgi: Compiled for Python/2.7.11.
+[Mon Apr 17 18:20:37.996473 2017] [wsgi:warn] [pid 7532:tid 168] mod_wsgi: Runtime using Python/2.7.
+[Mon Apr 17 18:20:38.012073 2017] [mpm_winnt:notice] [pid 7532:tid 168] AH00455: Apache/2.4.6 (Win64) mod_wsgi/4.4.23 Python/2.7 configured -- resuming normal operations
+[Mon Apr 17 18:20:38.012073 2017] [mpm_winnt:notice] [pid 7532:tid 168] AH00456: Apache Lounge VC10 Server built: Jul 16 2013 11:31:50
+[Mon Apr 17 18:20:38.012073 2017] [core:notice] [pid 7532:tid 168] AH00094: Command line: 'E:\\python\\project\\Apache24\\bin\\httpd.exe -d E:/python/project/Apache24'
+[Mon Apr 17 18:20:38.012073 2017] [mpm_winnt:notice] [pid 7532:tid 168] AH00418: Parent: Created child process 8732
+[Mon Apr 17 18:20:38.624676 2017] [wsgi:warn] [pid 8732:tid 152] mod_wsgi: Compiled for Python/2.7.11.
+[Mon Apr 17 18:20:38.624676 2017] [wsgi:warn] [pid 8732:tid 152] mod_wsgi: Runtime using Python/2.7.
+[Mon Apr 17 18:20:38.671477 2017] [mpm_winnt:notice] [pid 8732:tid 152] AH00354: Child: Starting 64 worker threads.
