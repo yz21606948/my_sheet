@@ -1,0 +1,52 @@
+<div id="implement_talble" style="margin-top:20px">
+	<table class="pure-table">
+		{% if errors %}
+		{% for error in errors %}
+		<tr>
+			<td>{{error}}</td>
+		</tr>
+		{% endfor %}
+		{% else %}
+		<thead>
+			<tr>
+				<th style="width:80px">问题编号</td>
+				<th align-"center" valign="middle">整改问题</td>
+				<th style="width:200px">问题属性</th>
+				<th style="width:120px" valign="middle">整改时限</th>
+			</tr>
+		</thead>
+		<tbody>
+			{% for contact in contacts %}
+			{% if forloop.counter|divisibleby:2 %}
+				<tr class="pure-table-odd">
+					<td align="center" align="middle"><a href="/information?q={{contact.id}}">{{contact.id}}</a></td>
+					<td>{{contact.problem}}</td>
+					<td>{{contact.problem_attribute}}</td>
+					<td>{{contact.deadline}}</td>
+				</tr>
+			{% else %}
+				<tr>
+					<td align="center" align="middle"><a href="/information?q={{contact.id}}">{{contact.id}}</a></td>
+					<td>{{contact.problem}}</td>
+					<td>{{contact.problem_attribute}}</td>
+					<td>{{contact.deadline}}</td>
+				</tr>
+			{% endif %}
+			{% endfor %}
+		</tbody>
+		{% endif %}
+	</table>
+	<div class="pagination" style="margin-top:20px">
+		<span class="step-links">
+			{% if contacts.has_previous %}
+				<a href="?page={{contacts.previous_page_number}}">前一页</a>
+			{% endif %}
+
+			<span class="current">
+				第 {{contacts.number}}页,共{{contacts.paginator.num_pages}}页
+			</span>
+			{% if contacts.has_next %}
+			<a href="?page={{contacts.next_page_number}}">后一页</a>
+			{% endif %}
+	</div>
+</div>

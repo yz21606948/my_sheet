@@ -69,22 +69,32 @@ def implement(request):
 	alarm_attr_count=get_attr_count(date_from,date_to)[2]
 	for attr in alarm_attr_count.keys():
 		alarm_list.extend(SafeInformation.objects.filter(problem_attribute__contains=attr))
-
 	if not alarm_list:
-			errors.append('所查区间内尚未有预警记录!')
-
-	#分页
-	paginator=Paginator(alarm_list,2)
-	page=request.GET.get('page')
-	try:
-		contacts=paginator.page(page)
-	except PageNotAnInteger:
-		contacts=paginator.page(1)
-	except EmptyPage:
-		contacts=paginator.page(paginator.num_pages)
-
-
+			errors.append('所查区间内尚未有报警记录!')
+	contacts=page(request,alarm_list,2)
 	return render(request,'implement.html',{'contacts':contacts,"errors":errors})
+
+def get_implement_table(request):
+	alarm_list=[]
+	errors=[]
+	alarm_attr_count={}
+	errors,alarm_attr_count=get_implement_data(request)
+	for attr in alarm_attr_count.keys():
+		alarm_list.extend(SafeInformation.objects.filter(problem_attribute__contains=attr))
+	contacts=page(request,alarm_list,2)
+	return render(request,'implement_table.html',{'contacts':contacts,"errors":errors})
+
+def get_implement_data(request):
+	errors=[]
+	if request.method == 'POST':
+		date_from=request.POST['date_from']
+		date_to=request.POST['date_to']
+		alarm_attr_count=get_attr_count(date_from,date_to)[2]
+		if not alarm_attr_count:
+			errors.append('所查区间内尚未有报警记录!')
+	else:
+		errors.append('查询未完成，请重新查询!')
+	return (errors,alarm_attr_count)
 
 def information(request):
 	if 'q' in request.GET and request.GET['q']:
@@ -92,9 +102,8 @@ def information(request):
 		problem=SafeInformation.objects.get(id=problem_id)
 	return render(request,'information.html',{'problem':problem})
 
-
-
-
+def analyze(request):
+	return render(request,'analyze.html')
 
 def get_attr_count(date_from,date_to):
 	problem_attr_count={}
@@ -146,3 +155,14 @@ def compute_current_day(year,month):
 		else:
 			end_day=28
 	return (start_day,end_day)
+
+def page(request,list,n):
+	paginator=Paginator(list,n)
+	page=request.GET.get('page')
+	try:
+		contacts=paginator.page(page)
+	except PageNotAnInteger:
+		contacts=paginator.page(1)
+	except EmptyPage:
+		contacts=paginator.page(paginator.num_pages)
+	return contacts

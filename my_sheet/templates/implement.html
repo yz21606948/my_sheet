@@ -6,59 +6,52 @@
 	</div>
 
 	<div class="content">
-		<div>
-			<h2 class="content-subhead" style="color:maroon">报警列表</h2>
-			<table class="pure-table">
-				{% if errors %}
-				{% for error in errors %}
-				<tr>
-					<td>{{error}}</td>
-				</tr>
-				{% endfor %}
-				{% else %}
-				<thead>
-					<tr>
-						<th style="width:80px">问题编号</td>
-						<th align-"center" valign="middle">整改问题</td>
-						<th style="width:200px">问题属性</th>
-						<th style="width:120px" valign="middle">整改时限</th>
-					</tr>
-				</thead>
-				<tbody>
-					{% for contact in contacts %}
-					{% if forloop.counter|divisibleby:2 %}
-						<tr class="pure-table-odd">
-							<td align="center" align="middle"><a href="/information?q={{contact.id}}">{{contact.id}}</a></td>
-							<td>{{contact.problem}}</td>
-							<td>{{contact.problem_attribute}}</td>
-							<td>{{contact.deadline}}</td>
-						</tr>
-					{% else %}
-						<tr>
-							<td align="center" align="middle"><a href="/information?q={{contact.id}}">{{contact.id}}</a></td>
-							<td>{{contact.problem}}</td>
-							<td>{{contact.problem_attribute}}</td>
-							<td>{{contact.deadline}}</td>
-						</tr>
-					{% endif %}
-					{% endfor %}
-				</tbody>
-				{% endif %}
-			</table>
-			<div class="pagination" style="margin-top:20px">
-				<span class="step-links">
-					{% if contacts.has_previous %}
-						<a href="?page={{contacts.previous_page_number}}">前一页</a>
-					{% endif %}
+		<h2 class="content-subhead" style="color:maroon">报警列表</h2>
+		<form class="pure-form">
+			<fieldset>
+			    <input type="date" placeholder="起始日期" id="date_from">
+			    <input type="date" placeholder="结束日期" id="date_to">
+			        <button type="submit" class="pure-button pure-button-primary" id="time_search">查询</button>
+			</fieldset>
+		</form>
+		<script type="text/javascript">
+			$(function(){
+				$('#time_search').click(function(){
+					var num=0
+					var str=""
+					$("input[type$='date']").each(function(n){
+						if($(this).val() == "")
+						{
+							num++
+							str+=$(this).attr("msg")+"不能为空!\r\n"
+						}
+					});
+					if(num > 0)
+					{
+						alert(str)
+						return false
+					}
 
-					<span class="current">
-						第 {{contacts.number}}页,共{{contacts.paginator.num_pages}}页
-					</span>
-					{% if contacts.has_next %}
-					<a href="?page={{contacts.next_page_number}}">后一页</a>
-					{% endif %}
-			</div>
-		</div>
+					var date_from=$('#date_from').val()
+					var date_to=$('#date_to').val()
+					//Ajax提交表单，渲染表格
+					$.ajax({
+						type:"POST",
+						data:{'date_from':date_from,'date_to':date_to},
+						url:"/get_implement_table/",
+						cache:false,
+						success:function(data){
+							$('#implement_talble').html(data)
+						},
+						error:function(){
+							alert("查找失败!")
+						}
+					});
+				});
+			});
+		</script>
+
+		{% include "implement_table.html" %}
 	</div>
 
 {% endblock %}
